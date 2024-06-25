@@ -8,6 +8,7 @@ export default {
         jakarta: ["Plus Jakarta Sans Variable", "sans-serif"],
         comfortaa: ["Comfortaa Variable", "cursive"],
         nunito: ["Nunito Variable", "sans-serif"],
+        quicksand: ["Quicksand Variable", "sans-serif"],
       },
       colors: {
         "background": "#ffffff",

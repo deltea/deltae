@@ -19,20 +19,26 @@ const { Content } = await post.render();
 
 <Layout title={post.data.title}>
   <main class="flex flex-col justify-center items-center py-16">
-    <h1 class="font-bold font-jakarta text-5xl text-center tracking-tight">
-      {post.data.title}
-    </h1>
+    <div class="text-center space-y-2">
+      <h1 class="font-bold font-quicksand text-5xl">
+        {post.data.title}
+      </h1>
+      <h2 class="font-quicksand font-semibold text-xl">
+        {formatDate(post.data.date)}
+      </h2>
+    </div>
 
-    <div class="group relative w-[40rem] my-8">
+    <div class="group relative w-[40rem] my-8 hover:scale-[102%] duration-150">
       <img
-        class="rounded-3xl w-full hover:scale-[102%] duration-150"
+        class="rounded-3xl w-full"
         src={post.data.hero}
         alt={post.data.title}
       >
 
       <a
         href={post.data.url}
-        class="group-hover:opacity-100 opacity-0 bg-black/30 absolute w-full h-full top-0 left-0 duration-200 flex justify-center items-center"
+        target="_blank"
+        class="group-hover:opacity-100 opacity-0 bg-black/50 absolute w-full h-full top-0 left-0 duration-200 flex justify-center items-center rounded-3xl"
       >
         <span class="text-white text-2xl font-bold">
           View Project ->
@@ -40,7 +46,7 @@ const { Content } = await post.render();
       </a>
     </div>
 
-    <article class="prose prose-invert">
+    <article class="prose prose-h1:font-quicksand">
       <Content />
     </article>
   </main>
