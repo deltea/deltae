@@ -7,12 +7,15 @@ export default {
         sans: ["Inter Variable", "sans-serif"],
         jakarta: ["Plus Jakarta Sans Variable", "sans-serif"],
         comfortaa: ["Comfortaa Variable", "cursive"],
+        nunito: ["Nunito Variable", "sans-serif"],
       },
       colors: {
-        "background": "#0F1112",
-        "white": "#E6E6E6",
-      }
+        "background": "#ffffff",
+      },
     },
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [
+    require("tailwindcss-animate"),
+    require("@tailwindcss/typography"),
+  ],
 }

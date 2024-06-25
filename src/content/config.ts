@@ -8,7 +8,7 @@ const projects = defineCollection({
     cover: z.string().optional(),
 		hero: z.string().optional(),
     github: z.string().optional(),
-    itch: z.string().optional(),
+    url: z.string().optional(),
 	}),
 });
 
