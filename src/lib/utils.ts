@@ -38,30 +38,3 @@ export function shadeColor(color: string, amount: number) {
   else if (g < 0) g = 0;
   return (usePound ? "#" : "") + String("000000" + (g | (b << 8) | (r << 16)).toString(16)).slice(-6);
 }
-
-export function hslToHex(h: number, s: number, l: number) {
-  l /= 100;
-  const a = s * Math.min(l, 1 - l) / 100;
-  const f = (n: number) => {
-    const k = (n + h / 30) % 12;
-    const color = l - a * Math.max(Math.min(k - 3, 9 - k, 1), -1);
-    return Math.round(255 * color).toString(16).padStart(2, '0');
-  };
-  return `#${f(0)}${f(8)}${f(4)}`;
-}
-
-export function cssVar(node: HTMLElement, variables: { [index: string]: string }) {
-  setCssVar(node, variables);
-
-  return {
-    update(variables: { [index: string]: string }) {
-      setCssVar(node, variables)
-    }
-  }
-}
-
-function setCssVar(node: HTMLElement, variables: { [index: string]: string }) {
-  for (const name in variables) {
-    node.style.setProperty(`--${name}`, variables[name]);
-  }
-}

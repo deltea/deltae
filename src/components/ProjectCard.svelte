@@ -1,11 +1,10 @@
 <script lang="ts">
   import "iconify-icon";
-  import Button from "$components/Button.svelte";
 
   export let post;
 </script>
 
-<Button animation={false} class="block space-y-5 text-black hover:cursor-default">
+<div class="block space-y-5 hover:cursor-default bg-white/20 rounded-3xl p-6 border-2 border-white/5 backdrop-blur-xl shadow-xl">
   <a href={`/projects/${post.slug}`}>
     <div
       class="bg-cover rounded-2xl bg-center h-48 w-full"
@@ -16,29 +15,27 @@
   <div class="flex justify-between items-center mx-2">
     <a
       href={`/projects/${post.slug}`}
-      class="font-nunito font-bold text-2xl grow text-left"
+      class="font-jakarta font-bold text-2xl grow text-left tracking-[0em]"
     >
       {post.data.title}
     </a>
 
-    <div class="flex items-center gap-3 text-xl">
-      <Button
-        element="a"
-        target="_blank"
+    <div class="flex items-center gap-2 text-xl">
+      <a
         href={post.data.github}
-        class="p-0 size-10 rounded-full flex justify-center items-center"
+        target="_blank"
+        class="p-0 size-10 bg-white/10 rounded-full flex justify-center items-center"
       >
         <iconify-icon icon="mingcute:code-fill"></iconify-icon>
-      </Button>
+      </a>
 
-      <Button
-        element="a"
-        target="_blank"
+      <a
         href={post.data.url}
-        class="p-0 size-10 rounded-full flex justify-center items-center"
+        target="_blank"
+        class="p-0 size-10 bg-white/10 rounded-full flex justify-center items-center"
       >
         <iconify-icon icon="iconamoon:link-external-bold"></iconify-icon>
-      </Button>
+      </a>
     </div>
   </div>
-</Button>
+</div>

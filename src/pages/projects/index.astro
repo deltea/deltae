@@ -1,6 +1,7 @@
 ---
 import Layout from "$layouts/Layout.astro"
 import { getCollection } from "astro:content";
+
 import ProjectCard from "$components/ProjectCard.svelte";
 
 const posts = (await getCollection("projects")).sort(
@@ -9,8 +10,8 @@ const posts = (await getCollection("projects")).sort(
 ---
 
 <Layout title="projects">
-  <main class="p-8 space-y-8">
-    <h1 class="font-bold text-4xl text-center font-nunito">
+  <main class="py-8 px-8 space-y-8">
+    <h1 class="font-bold text-4xl text-center font-jakarta">
       Projects
     </h1>
 

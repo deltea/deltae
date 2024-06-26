@@ -18,12 +18,12 @@ const { Content } = await post.render();
 ---
 
 <Layout title={post.data.title}>
-  <main class="flex flex-col justify-center items-center py-16">
+  <main class="flex flex-col justify-center items-center pb-16">
     <div class="text-center space-y-2">
-      <h1 class="font-bold font-quicksand text-5xl">
+      <h1 class="font-bold text-5xl">
         {post.data.title}
       </h1>
-      <h2 class="font-quicksand font-semibold text-xl">
+      <h2 class="font-semibold text-xl">
         {formatDate(post.data.date)}
       </h2>
     </div>
@@ -46,7 +46,7 @@ const { Content } = await post.render();
       </a>
     </div>
 
-    <article class="prose prose-h1:font-quicksand">
+    <article class="prose prose-h1:font-jakarta prose-invert">
       <Content />
     </article>
   </main>
