@@ -20,7 +20,7 @@
     "@iconify-json/mingcute": "^1.1.18",
     "@tailwindcss/typography": "^0.5.13",
     "@types/p5": "^1.7.6",
-    "astro": "^4.11.0",
+    "astro": "^4.16.6",
     "astro-icon": "^1.1.0",
     "bits-ui": "^0.21.10",
     "clsx": "^2.1.1",
